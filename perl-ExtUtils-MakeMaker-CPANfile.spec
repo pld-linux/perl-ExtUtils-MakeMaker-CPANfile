@@ -56,5 +56,6 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes LICENSE README.md
-%{perl_vendorlib}/*
-%{_mandir}/man3/*
+%dir %{perl_vendorlib}/ExtUtils/MakeMaker
+%{perl_vendorlib}/ExtUtils/MakeMaker/CPANfile.pm
+%{_mandir}/man3/ExtUtils::MakeMaker::CPANfile.3pm*
