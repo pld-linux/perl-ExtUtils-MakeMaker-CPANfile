@@ -4,7 +4,6 @@
 
 %define		pdir	ExtUtils
 %define		pnam	MakeMaker-CPANfile
-%include	/usr/lib/rpm/macros.perl
 Summary:	CPANfile support for ExtUtils::MakeMaker
 Name:		perl-ExtUtils-MakeMaker-CPANfile
 Version:	0.06
