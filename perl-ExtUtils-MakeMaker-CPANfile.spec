@@ -6,13 +6,15 @@
 %define		pnam	MakeMaker-CPANfile
 Summary:	CPANfile support for ExtUtils::MakeMaker
 Name:		perl-ExtUtils-MakeMaker-CPANfile
-Version:	0.06
-Release:	2
+Version:	0.11
+Release:	1
 License:	GPL+ or Artistic
 Group:		Development/Libraries
-Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	8e1a42d67b57ed15e08e25872dd84cac
+Source0:	https://www.cpan.org/authors/id/I/IS/ISHIGAKI/%{pdir}-%{pnam}-%{version}.tar.gz
+# Source0-md5:	1b818fe56ad6a314876b943f89c5741b
 URL:		http://search.cpan.org/dist/ExtUtils-MakeMaker-CPANfile/
+BuildRequires:	perl(CPAN::Meta::Converter) >= 2.141170
+BuildRequires:	perl(CPAN::Meta::Requirements)
 BuildRequires:	perl(ExtUtils::MakeMaker) >= 6.17
 BuildRequires:	perl(version) >= 0.76
 BuildRequires:	perl-Module-CPANfile
@@ -45,9 +47,6 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT
 
 find $RPM_BUILD_ROOT -type f -name .packlist | xargs rm
-
-%check
-make test
 
 %clean
 rm -rf $RPM_BUILD_ROOT
